@@ -29,6 +29,7 @@ jobs:
           dst_token: ${{ secrets.GITEE_TOKEN }}
           black_list: "LingmoOS"
           account_type: org
+          force_update: true
           lfs: true
           # src_account_type: org
           # dst_account_type: org
