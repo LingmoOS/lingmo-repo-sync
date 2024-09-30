@@ -5,8 +5,8 @@ name: CI
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  # schedule:
-  #   - cron: "59 15 * * *"
+  schedule:
+    - cron: "59 15 * * *"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -27,6 +27,7 @@ jobs:
           dst: gitee/LingmoOS
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }}
+          black_list: "LingmoOS"
           account_type: org
           lfs: true
           # src_account_type: org
