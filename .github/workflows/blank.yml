@@ -27,7 +27,7 @@ jobs:
           dst: gitee/LingmoOS
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }}
-          black_list: "LingmoOS,lingmo-updator"
+          black_list: "LingmoOS,lingmo-updator,live-build-config"
           account_type: org
           force_update: true
           lfs: true
