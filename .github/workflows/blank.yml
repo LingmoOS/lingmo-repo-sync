@@ -22,7 +22,7 @@ jobs:
     steps:
 
       - name: Hosts
-        run: echo "154.213.2.253    gitee.com" | sudo tee -a /etc/hosts
+        run: echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.conf
   
       - uses: actions/cache@v4
         id: cache
