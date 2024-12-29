@@ -25,6 +25,7 @@ jobs:
         id: cache
         with:
           path: ./github/workspace/hub-mirror-cache
+          key: ${{ runner.os }}-${{ hashFiles('.github/workflows/blank.yml') }}
           
       - name: Mirror the Github organization repos to Gitee.
         uses: Yikun/hub-mirror-action@master
