@@ -39,5 +39,6 @@ jobs:
           force_update: true
           lfs: true
           cache_path: ./github/workspace/hub-mirror-cache
+          debug: true
           # src_account_type: org
           # dst_account_type: org
