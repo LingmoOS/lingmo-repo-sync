@@ -21,14 +21,14 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
 
-      - name: Hosts
-        run: echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.conf
+      # - name: Hosts
+      #   run: echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.conf
   
-      - uses: actions/cache@v4
-        id: cache
-        with:
-          path: ./github/workspace/hub-mirror-cache
-          key: ${{ runner.os }}-${{ hashFiles('.github/workflows/blank.yml') }}
+      # - uses: actions/cache@v4
+      #   id: cache
+      #   with:
+      #     path: ./github/workspace/hub-mirror-cache
+      #     key: ${{ runner.os }}-${{ hashFiles('.github/workflows/blank.yml') }}
           
       - name: Mirror the Github organization repos to Gitee.
         uses: Yikun/hub-mirror-action@master
@@ -41,7 +41,7 @@ jobs:
           account_type: org
           force_update: true
           lfs: true
-          cache_path: ./github/workspace/hub-mirror-cache
+          # cache_path: ./github/workspace/hub-mirror-cache
           debug: true
           # src_account_type: org
           # dst_account_type: org
